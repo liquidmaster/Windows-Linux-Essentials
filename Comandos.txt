@@ -1,5 +1,5 @@
 Saber en una maquina X se encuentra logeado un usuario
-get-wmiobject win32_computersystem -computername bcopwrk1153 | select username
+get-wmiobject win32_computersystem -computername ComputerName | select username
 
 Saber que usuario se encuentra logueado en la maquina ComputerName
 QUser /server:ComputerName
