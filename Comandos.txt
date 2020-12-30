@@ -1,0 +1,20 @@
+Saber en una maquina X se encuentra logeado un usuario
+get-wmiobject win32_computersystem -computername bcopwrk1153 | select username
+
+Saber que usuario se encuentra logueado en la maquina ComputerName
+QUser /server:ComputerName
+
+Cerrar la sesion de un usuario de manera remota
+Logoff sessionID /server:ComputerName
+
+Cuanto tiempo se encuentra encendido un equipo
+systeminfo | find "arranque"
+
+Saber en que contralodor de dominio estas logeado
+nltest/dsgetdc:bancop
+
+Cambiar el controlador de dominio(Administrador)
+nltest /Server:ComputerName /SC_RESET:DomainName\DomainControllerName
+
+CA server
+C:\Windows\System32\certsrv\CertEnroll
