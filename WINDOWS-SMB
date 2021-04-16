@@ -1,0 +1,10 @@
+Enable SMB Encryption
+PowerShell
+Set-SmbShare –Name <sharename> -EncryptData $true
+To enable SMB Encryption for the entire file server, type the following script on the server:
+Set-SmbServerConfiguration –EncryptData $true
+To create a new SMB file share with SMB Encryption enabled, type the following script:
+New-SmbShare –Name <sharename> -Path <pathname> –EncryptData $true
+
+Disabling SMB 1.0
+Get-SmbSession | Select Dialect,ClientComputerName,ClientUserName | ? Dialect -lt 2
